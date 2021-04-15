@@ -50,7 +50,7 @@ console.log(newSentence);
 //Bonus
 console.log("Bonus");
 for (let b1 = 1; b1 <= 50; b1++) {
-    if (b1 % 3 == 0 && b1 % 7 == 0) {
+    if (b1 % 3 == 0 && b1 % 5 == 0) {
         console.log("fizzbuzz");
     } else if (b1 % 3 == 0) {
         console.log("fizz");
