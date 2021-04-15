@@ -39,9 +39,14 @@ console.log("total : " + total);
 //06 - Reverse
 console.log("ex06");
 let sentence = "Hello Konexio !";
-let sentenceSplit = sentence.split("");
-sentenceSplit.reverse();
-console.log("result : " + sentenceSplit.join(""));
+let newSentence = '';
+let s = sentence.length - 1;
+console.log(s);
+while (s >= 0) {
+    newSentence = newSentence + sentence[s];
+    s--
+}
+console.log(newSentence);
 //Bonus
 console.log("Bonus");
 for (let b1 = 1; b1 <= 50; b1++) {
