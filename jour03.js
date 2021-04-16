@@ -44,12 +44,12 @@ let s = sentence.length - 1;
 console.log(s);
 while (s >= 0) {
     newSentence = newSentence + sentence[s];
-    s--
+    s--;
 }
 console.log(newSentence);
-//Bonus
+// 07 - Fizzbuzz
 console.log("Bonus");
-for (let b1 = 1; b1 <= 50; b1++) {
+for (let b1 = 1; b1 <= 100; b1++) {
     if (b1 % 3 == 0 && b1 % 5 == 0) {
         console.log("fizzbuzz");
     } else if (b1 % 3 == 0) {
@@ -62,11 +62,11 @@ for (let b1 = 1; b1 <= 50; b1++) {
         console.log(b1);
     }
 }
-//Bonus II
+//Bonus 
 console.log("Bonus II");
 b1 = 1
-while (b1 <= 50) {
-    if (b1 % 3 == 0 && b1 % 7 == 0) {
+while (b1 <= 100) {
+    if (b1 % 3 == 0 && b1 % 5 == 0) {
         console.log("fizzbuzz");
     } else if (b1 % 3 == 0) {
         console.log("fizz");
@@ -79,13 +79,13 @@ while (b1 <= 50) {
     }
     b1++;
 }
-//Bonus III
+//Bonus II
 console.log("Bonus III");
 let promo = ["Aneta", "Anna", "Fadela", "Fanny", "Jules", "Malika", "Sara", "Lucie", "Ophelie", "Sarah"];
 let randomNumber = Math.floor(Math.random() * (10 - 0) + 0);
 console.log("randomNumber : " + randomNumber);
 console.log("Name: " + promo[randomNumber]);
-//Bonus IV
+//Bonus III
 console.log("Bonus IV");
 let n = 0;
 let arry = [];
