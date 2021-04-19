@@ -1,10 +1,8 @@
 //01 - Somme des carrés
 console.log("ex01");
-let i = 5;
 let total = 0;
-while (i <= 10) {
+for (let i = 5; i <= 10; i++) {
     total = total + (i * i);
-    i++;
 }
 console.log("total : " + total);
 //02 - Comptons
