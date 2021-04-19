@@ -15,6 +15,11 @@ console.log("rounded : " + rounded);
 let test = 12;
 let bis = 5;
 console.log(test + bis);
+console.log(test - bis);
+console.log(test * bis);
+console.log(test / bis);
+console.log(test ** bis);
+console.log(test % bis);
 //05 - Comparaison
 test = 143;
 bis = 219;
