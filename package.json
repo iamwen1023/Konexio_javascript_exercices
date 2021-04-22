@@ -1,0 +1,23 @@
+{
+  "name": "javascript-exercices",
+  "version": "1.0.0",
+  "description": "",
+  "main": "fichier.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamwen1023/javascript-exercices.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamwen1023/javascript-exercices/issues"
+  },
+  "homepage": "https://github.com/iamwen1023/javascript-exercices#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "prompt": "^1.1.0"
+  }
+}
