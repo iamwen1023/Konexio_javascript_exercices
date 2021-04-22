@@ -107,8 +107,8 @@ function onErr(err) { // permet de gérer les erreurs
     console.log(err);
     return 1;
 }
-let wordSecret = "apple";
-let arrayWord = wordSecret.split('');
+let wordSecret = "brute";
+let arrayWord = wordSecret.toUpperCase().split('');
 let count = 6;
 
 function playMotus() {
@@ -116,22 +116,32 @@ function playMotus() {
         if (err) {
             return onErr(err);
         }
+        arrayWord = wordSecret.toUpperCase().split('');
+        res.motus = res.motus.toUpperCase();
         count--;
+        if (res.motus.length != wordSecret.length) {
+            return console.log("Byebye");
+        }
         let arrayResult = res.motus.split('');
-        for (let i = 0; i < wordSecret.length; i++) {
+        let result = [];
+        for (let i = 0; i < arrayResult.length; i++) {
+
             if (arrayResult[i] === arrayWord[i]) {
-                console.log(colors.bgBrightRed(arrayResult[i]));
-            } else if (arrayWord.includes(arrayResult[i]) === true) {
-                console.log(colors.bgBrightYellow(arrayResult[i]))
-            } else {
-                if (arrayResult[i] == undefined || arrayResult[i] == null) {
-                    console.log(colors.bgBrightBlue(' '));
-                } else {
-                    console.log(colors.bgBrightBlue(arrayResult[i]));
-                }
+                result[i] = colors.bgBrightRed(arrayResult[i]);
+                arrayWord[i] = '';
             }
         }
-        if (res.motus === wordSecret) {
+        for (let i = 0; i < arrayResult.length; i++) {
+            if (result[i] == undefined && arrayWord.includes(arrayResult[i]) == true) {
+                result[i] = colors.bgBrightYellow(arrayResult[i]);
+                arrayWord[arrayWord.indexOf(arrayResult[i])] = '';
+            } else if (result[i] == undefined) {
+                result[i] = colors.bgBrightBlue(arrayResult[i]);
+            }
+        }
+        console.log(result.join(''));
+
+        if (res.motus === wordSecret.toUpperCase()) {
             console.log("Brovo!");
         } else if (count > 0) {
             console.log("Vous avez encore " + count + " fois pour réessayer");
@@ -142,6 +152,7 @@ function playMotus() {
     });
 }
 playMotus();
+
 //nombre premier
 //console.log("nombre premier");
 
