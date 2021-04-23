@@ -89,6 +89,11 @@ function play() {
     });
 }
 //play();
+//04 - Guessls --bonus
+let guess = require('./play.js');
+guess.exports_game();
+
+
 // Bonus
 console.log("Bonus");
 var prompt = require("prompt");
@@ -151,7 +156,7 @@ function playMotus() {
         }
     });
 }
-playMotus();
+//playMotus();
 
 //nombre premier
 //console.log("nombre premier");
