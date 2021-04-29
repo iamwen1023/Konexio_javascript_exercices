@@ -76,8 +76,8 @@ console.log(res);
 //Bonus
 console.log("Bonus");
 var prompt = require('prompt');
-const wordScret = "apple";
-let arr = wordScret.split("");
+var randomWords = require('random-words');
+let arr = randomWords().split("");
 let arrResult = arr.map(e => "_");
 console.log(arrResult.join(" "));
 let count = 10;
